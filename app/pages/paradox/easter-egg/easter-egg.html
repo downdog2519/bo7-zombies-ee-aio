@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paradox Junction – Easter Egg Guide</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="../../../styles/globals.css">
+  <link rel="stylesheet" href="../../../styles/neon.css">
+  <link rel="stylesheet" href="../../../styles/ee-shared.css">
+  <link rel="stylesheet" href="easter-egg.css">
+
+  <!-- Global systems -->
+  <script src="../../../scripts/header.js" defer></script>
+  <script type="module" src="../../../scripts/router.js"></script>
+  <script type="module" src="../../../scripts/storage.js"></script>
+
+  <!-- Page-specific JS -->
+  <script type="module" src="easter-egg.js"></script>
+</head>
+
+<body class="metal-bg">
+  <div class="overlay-dark"></div>
+
+  <main class="center-container">
+
+    <!-- ⭐ Injected Header (Logo + Version) -->
+    <div id="header"></div>
+
+    <section class="panel fullscreen-panel">
+
+      <h1 class="panel-header cyan-title">
+        EASTER EGG STEPS
+      </h1>
+
+      <!-- PROGRESS BAR -->
+      <div id="ee-progress-label">0% Complete</div>
+      <div id="ee-progress-wrapper">
+        <div id="ee-progress-bar"></div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="neon-btn neon-cyan tab-btn" data-tab="active">ACTIVE STEPS</button>
+        <button class="neon-btn neon-purple tab-btn" data-tab="completed">COMPLETED</button>
+      </div>
+
+      <!-- Step Selector -->
+      <div class="selector-wrapper">
+        <select id="step-selector" class="neon-btn neon-cyan selector-box"></select>
+      </div>
+
+      <!-- ACTIVE STEP DISPLAY -->
+      <div id="active-step-display"></div>
+
+      <!-- COMPLETED STEPS -->
+      <div id="completed-steps"></div>
+
+      <div class="back-row ee-buttons">
+        <button class="neon-btn neon-red" id="reset-ee">RESET EE PROGRESS</button>
+        <button class="neon-btn neon-cyan" id="back-paradox">RETURN TO PARADOX JUNCTION</button>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

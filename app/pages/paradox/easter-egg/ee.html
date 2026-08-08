@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PARADOX JUNCTION – Easter Egg</title>
+  <link rel="stylesheet" href="../../../styles/globals.css">
+  <link rel="stylesheet" href="../../../styles/neon.css">
+  <link rel="stylesheet" href="../../../styles/ee-shared.css">
+  <script src="../../../scripts/header.js" defer></script>
+  <script type="module" src="ee.js"></script>
+</head>
+<body>
+  <main class="center-container">
+    <div id="header"></div>
+    <section class="panel fullscreen-panel">
+      <h1 class="panel-header" style="color: var(--cyan-glow);">PARADOX JUNCTION – EASTER EGG GUIDE</h1>
+      <div id="ee-progress-label" style="color: var(--cyan-glow); text-shadow: 0 0 6px var(--cyan-glow);">0% Complete</div>
+      <div id="ee-progress-wrapper" style="border: 1px solid var(--cyan-glow);">
+        <div id="ee-progress-bar" style="background: var(--cyan-glow); box-shadow: 0 0 10px var(--cyan-glow);"></div>
+      </div>
+      <div class="tabs">
+        <button class="neon-btn neon-cyan tab-btn" data-tab="active">ACTIVE STEPS</button>
+        <button class="neon-btn neon-cyan tab-btn" data-tab="completed">COMPLETED</button>
+      </div>
+      <div class="selector-wrapper">
+        <select id="step-selector" class="neon-btn neon-cyan selector-box"></select>
+      </div>
+      <div id="active-step-display"></div>
+      <div id="completed-steps"></div>
+      <div class="back-row ee-buttons">
+        <button class="neon-btn neon-cyan" id="reset-ee">RESET EE PROGRESS</button>
+        <button class="neon-btn neon-cyan" id="back-map">RETURN TO MAP MENU</button>
+      </div>
+    </section>
+  </main>
+  <div id="img-zoom-overlay"><img src="" alt="Zoomed Image"></div>
+</body>
+</html>

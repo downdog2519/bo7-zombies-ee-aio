@@ -1,0 +1,76 @@
+/* Ingredient images */
+.ingredient-img {
+  width: 75px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Table spacing */
+.ingredients-table td,
+.ingredients-table th {
+  padding: 8px 10px;
+}
+
+/* Zoom modal */
+.zoom-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#zoomImage {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid var(--red-glow);
+  border-radius: 6px;
+}
+
+/* Tooltip container */
+.zoomable {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip bubble */
+.zoomable::after {
+  content: "Click to Zoom";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(20, 0, 0, 0.9);
+  color: var(--red-glow);
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid var(--red-glow);
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+  font-family: 'BO7SciFi';
+  text-shadow: 0 0 4px var(--red-glow);
+  z-index: 99999;
+}
+
+/* Show tooltip on hover */
+.zoomable:hover::after {
+  opacity: 1;
+  animation: tooltipGlow 1.4s ease-in-out infinite alternate;
+}
+
+/* Glow animation */
+@keyframes tooltipGlow {
+  0% {
+    box-shadow: 0 0 4px var(--red-glow), 0 0 6px var(--red-glow);
+    text-shadow: 0 0 4px var(--red-glow);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--red-glow), 0 0 14px var(--red-glow);
+    text-shadow: 0 0 8px var(--red-glow);
+  }
+}

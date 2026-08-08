@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kowakujō – Code Tracker</title>
+  <link rel="stylesheet" href="../../../styles/globals.css">
+  <link rel="stylesheet" href="../../../styles/neon.css">
+  <link rel="stylesheet" href="../../../styles/ee-shared.css">
+  <link rel="stylesheet" href="../../../styles/code-sheet.css">
+  <script src="../../../scripts/header.js" defer></script>
+  <script type="module" src="codes.js"></script>
+</head>
+<body class="metal-bg">
+  <div class="overlay-dark"></div>
+  <main class="center-container">
+    <div id="header"></div>
+    <section class="panel fullscreen-panel code-panel accent-green">
+      <h1 class="panel-header" style="color:#00ff88;">KOWAKUJŌ – CODE TRACKER</h1>
+      <p class="code-top-tip">Tap any image to zoom · values auto-save</p>
+
+      <div class="code-sheet-scroll" style="color:#00ff88;">
+
+        <div class="code-section">
+          <div class="code-section-head">
+            <h2>1 · 11 Lanterns</h2>
+            <span class="code-badge" id="lanternCount">0 / 11 lit</span>
+          </div>
+          <div class="code-split">
+            <div class="code-img-col">
+              <img id="lanternMapImg" src="assets/lantern-map.jpg" class="code-ref-img zoomable" alt="Lantern route zones" loading="eager">
+              <span class="img-caption">Zone order reminder · ~10s between shots</span>
+            </div>
+            <div class="code-fields-col">
+              <p class="code-hint">Tick each lantern as you light it. Miss the timer → finish next round.</p>
+              <div class="lantern-grid" id="lanternGrid"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-section">
+          <div class="code-section-head">
+            <h2>2 · Murder Mystery Board</h2>
+            <span class="code-badge">Per-run random</span>
+          </div>
+          <div class="code-split">
+            <div class="code-img-col">
+              <img src="assets/murder-board.jpg" class="code-ref-img zoomable" alt="Murder mystery poster board layout" loading="eager">
+              <span class="img-caption">Record each poster for this match</span>
+            </div>
+            <div class="code-fields-col poster-grid">
+              <div class="code-row stacked">
+                <label>Poster 1
+                  <select class="code-select wide" id="poster1"></select>
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Poster 2 (culprit)
+                  <select class="code-select wide" id="poster2"></select>
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Poster 3 (poison)
+                  <select class="code-select wide" id="poster3"></select>
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Poster 4 (painting)
+                  <select class="code-select wide" id="poster4"></select>
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Poster 5
+                  <select class="code-select wide" id="poster5"></select>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-section">
+          <div class="code-section-head">
+            <h2>3 · Clock / Zodiac Math</h2>
+            <span class="code-badge">A − B = dial</span>
+          </div>
+          <div class="code-split">
+            <div class="code-img-col">
+              <img src="assets/clock-math.jpg" class="code-ref-img zoomable" alt="Clock math A minus B equals dial" loading="eager">
+              <span class="img-caption">Dial result auto-calculates</span>
+            </div>
+            <div class="code-fields-col">
+              <div class="code-math-row">
+                <label>Time of death
+                  <input class="code-input" id="deathTime" type="number" inputmode="numeric" placeholder="A">
+                </label>
+                <span class="math-op">−</span>
+                <label>Symptom dur.
+                  <input class="code-input" id="symptomDur" type="number" inputmode="numeric" placeholder="B">
+                </label>
+                <span class="math-op">=</span>
+                <label>Dial result
+                  <input class="code-input result" id="dialResult" type="text" readonly placeholder="—">
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Extra notes
+                  <input class="code-input wide" id="mysteryNote" type="text" placeholder="Ghost / doctor / flag notes">
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Fox Mask pattern
+                  <input class="code-input wide" id="foxPattern" type="text" placeholder="Simon pattern">
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Clock / Flag
+                  <input class="code-input wide" id="clockFlag" type="text" placeholder="Clock & flag solution">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="back-row ee-buttons code-actions">
+        <button class="neon-btn neon-green" id="reset-codes" type="button">RESET CODES</button>
+        <button class="neon-btn neon-green" id="back-ee" type="button" style="display:none;">RETURN TO EE STEP</button>
+        <button class="neon-btn neon-green" id="back-map" type="button">RETURN TO KOWAKUJŌ</button>
+      </div>
+    </section>
+  </main>
+  <div id="img-zoom-overlay" class="zoom-overlay" aria-hidden="true"><img src="" alt="Zoomed reference"></div>
+</body>
+</html>

@@ -1,0 +1,278 @@
+/* ---------------------------------------------
+   TRACKER PANEL (UNIQUE)
+--------------------------------------------- */
+.tracker-panel {
+  background: rgba(0, 0, 0, 0.65);
+  background-image: url("../../../assets/images/backgrounds/metal-medium.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.9),
+    inset 0 0 12px rgba(255, 255, 255, 0.03);
+
+  height: 820px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------
+   SCROLLABLE CONTENT
+--------------------------------------------- */
+.tracker-scroll {
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-top: 1rem;
+  flex: 1;
+}
+
+/* ---------------------------------------------
+   SECTION TITLES
+--------------------------------------------- */
+.section-title {
+  font-family: 'BO7Chalk';
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #c38bff;
+  margin: 1.5rem 0 0.5rem;
+  text-shadow:
+    0 0 6px #c38bff,
+    0 0 10px #b46aff;
+  letter-spacing: 0.5px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.section-title-red {
+  color: #ff6b6b;
+  font-weight: 800;
+  text-shadow:
+    0 0 4px black,
+    0 0 8px #ff6b6b,
+    0 0 12px #ff3b3b;
+  letter-spacing: 0.4px;
+}
+
+/* ---------------------------------------------
+   LAYOUT ROWS
+--------------------------------------------- */
+.planet-row,
+.checkbox-row,
+.symbol-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* ---------------------------------------------
+   INPUTS
+--------------------------------------------- */
+select,
+input[type="text"] {
+  background: #111;
+  border: 1px solid var(--purple-glow);
+  color: var(--text-main);
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-family: 'BO7SciFi';
+}
+
+.planet-position {
+  margin-top: 0.3rem;
+  font-weight: bold;
+  color: var(--purple-glow);
+  text-shadow: 0 0 6px var(--purple-glow);
+}
+
+/* ---------------------------------------------
+   CHECKBOXES
+--------------------------------------------- */
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* ---------------------------------------------
+   SYMBOLS
+--------------------------------------------- */
+.symbol-row {
+  justify-content: space-between;
+}
+
+.symbol-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: grab;
+}
+
+.symbol-number {
+  font-family: 'BO7Chalk';
+  color: var(--purple-glow);
+  margin-bottom: 0.3rem;
+}
+
+.symbol-preview {
+  width: 55px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.15s ease;
+}
+
+.symbol-preview:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------
+   STATUE DROPDOWNS
+--------------------------------------------- */
+.statue-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.statue-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.statue-wrapper {
+  position: relative;
+  width: 150px;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid var(--purple-glow);
+  border-radius: 6px;
+}
+
+.statue-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-family: 'BO7SciFi';
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.statue-dropdown:hover {
+  background: rgba(40, 0, 60, 0.4);
+}
+
+.dropdown-arrow {
+  font-size: 0.9rem;
+  color: var(--purple-glow);
+}
+
+.statue-dropdown:hover .dropdown-arrow {
+  color: var(--cyan-glow);
+}
+
+.statue-panel {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 150px;
+  background: rgba(0,0,0,0.85);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  padding: 0.5rem;
+  display: none;
+  flex-direction: column;
+  z-index: 20;
+  animation: dropdownFade 0.2s ease-out;
+}
+
+.statue-panel label {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  font-family: 'BO7SciFi';
+}
+
+.statue-panel input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.statue-img {
+  width: 55px;
+  height: auto;
+  margin: 0.4rem auto 0.6rem;
+  display: block;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.15s ease;
+}
+
+.statue-img:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------
+   INLINE ELEMENTS
+--------------------------------------------- */
+.planet-inline,
+.planet-selector-inline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mars-code-inline {
+  width: 80px;
+  background: #111;
+  border: 1px solid var(--purple-glow);
+  color: var(--text-main);
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-family: 'BO7SciFi';
+}
+
+.planet-select-inline {
+  background: #111;
+  border: 1px solid var(--purple-glow);
+  color: var(--text-main);
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-family: 'BO7SciFi';
+  width: 150px;
+  text-align: center;
+}
+
+/* ---------------------------------------------
+   RESET + BACK BUTTONS
+--------------------------------------------- */
+.reset-row,
+.back-row {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}

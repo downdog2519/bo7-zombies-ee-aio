@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KOWAKUJŌ – Easter Egg</title>
+  <link rel="stylesheet" href="../../../styles/globals.css">
+  <link rel="stylesheet" href="../../../styles/neon.css">
+  <link rel="stylesheet" href="../../../styles/ee-shared.css">
+  <script src="../../../scripts/header.js" defer></script>
+  <script type="module" src="ee.js"></script>
+</head>
+<body class="metal-bg">
+  <div class="overlay-dark"></div>
+  <main class="center-container">
+    <div id="header"></div>
+    <section class="panel fullscreen-panel">
+      <h1 class="panel-header" style="color: #00ff88;">KOWAKUJŌ – EASTER EGG GUIDE</h1>
+      <p class="ee-tool-tip" style="color:#00ff88;">Tap images to zoom · use Open CODE TRACKER when you need to record codes</p>
+      <div id="ee-progress-label" style="color: #00ff88; text-shadow: 0 0 6px #00ff88;">0% Complete</div>
+      <div id="ee-progress-wrapper" style="border: 1px solid #00ff88;">
+        <div id="ee-progress-bar" style="background: #00ff88; box-shadow: 0 0 10px #00ff88;"></div>
+      </div>
+      <div class="tabs">
+        <button class="neon-btn neon-green tab-btn" data-tab="active">ACTIVE STEPS</button>
+        <button class="neon-btn neon-green tab-btn" data-tab="completed">COMPLETED</button>
+      </div>
+      <div class="selector-wrapper">
+        <select id="step-selector" class="neon-btn neon-green selector-box"></select>
+      </div>
+      <div id="active-step-display"></div>
+      <div id="completed-steps"></div>
+      <div class="back-row ee-buttons">
+        <button class="neon-btn neon-green" id="open-codes" type="button">OPEN CODE TRACKER</button>
+        <button class="neon-btn neon-green" id="reset-ee" type="button">RESET EE PROGRESS</button>
+        <button class="neon-btn neon-green" id="back-map" type="button">RETURN TO MAP MENU</button>
+      </div>
+    </section>
+  </main>
+  <div id="img-zoom-overlay"><img src="" alt="Zoomed Image"></div>
+</body>
+</html>

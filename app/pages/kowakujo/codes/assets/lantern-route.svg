@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+  <rect width="760" height="420" rx="12" fill="#0b0b0f"/>
+  <text x="380" y="34" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="22" font-weight="700">11 Lanterns  Timed Path Reminder</text>
+  <text x="380" y="58" text-anchor="middle" fill="#c9c9c9" font-family="Segoe UI, Arial" font-size="13">Shoot with Nekomancer · ~10s between lanterns · tick boxes as you go</text>
+
+  <!-- zones -->
+  <rect x="40" y="90" width="200" height="90" rx="8" fill="#122018" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="140" y="120" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="14" font-weight="700">Tenshu Entrance</text>
+  <text x="140" y="148" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="16">1 · 2 · 3</text>
+
+  <rect x="280" y="90" width="200" height="90" rx="8" fill="#122018" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="380" y="120" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="14" font-weight="700">Outer Ward</text>
+  <text x="380" y="148" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="16">4 · 5</text>
+
+  <rect x="520" y="90" width="200" height="90" rx="8" fill="#122018" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="620" y="120" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="14" font-weight="700">Courtyard</text>
+  <text x="620" y="148" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="16">6 · 7</text>
+
+  <rect x="160" y="220" width="200" height="90" rx="8" fill="#122018" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="260" y="250" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="14" font-weight="700">Gardens</text>
+  <text x="260" y="278" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="16">8 · 9</text>
+
+  <rect x="400" y="220" width="200" height="90" rx="8" fill="#122018" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="500" y="250" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="14" font-weight="700">Training Area</text>
+  <text x="500" y="278" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="16">10 · 11</text>
+
+  <!-- flow arrows -->
+  <path d="M240 135 H275" stroke="#00ff88" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M480 135 H515" stroke="#00ff88" stroke-width="3"/>
+  <path d="M620 180 V205 H260 V220" stroke="#00ff88" stroke-width="3" fill="none"/>
+  <path d="M360 265 H395" stroke="#00ff88" stroke-width="3"/>
+
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#00ff88"/>
+    </marker>
+  </defs>
+
+  <text x="380" y="360" text-anchor="middle" fill="#aaa" font-family="Segoe UI, Arial" font-size="13">Exact spots vary slightly  use zone order + your ticks. Drop a real map PNG into assets/lantern-map.png later.</text>
+  <text x="380" y="385" text-anchor="middle" fill="#777" font-family="Segoe UI, Arial" font-size="12">Miss the timer ’ finish remaining next round</text>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "name": "cmz-bo7-zombies-ee-aio",
+  "version": "1.3.0",
+  "description": "CMZ BO7 Zombies EE AIO Tracker — Comfy Munchie Zombies companion for all maps through Season 4",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.cmz.aio",
+    "productName": "CMZ Zombies EE AIO",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "app/**/*",
+      "main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "app/assets/images/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.0"
+  }
+}

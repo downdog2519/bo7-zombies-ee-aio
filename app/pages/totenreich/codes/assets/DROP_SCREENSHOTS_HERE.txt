@@ -1,0 +1,5 @@
+# Optional: drop replacement screenshots here.
+# Filenames used by the app:
+#   freq-lights.jpg
+#   claw-combo.jpg
+#   rune-arrows.jpg

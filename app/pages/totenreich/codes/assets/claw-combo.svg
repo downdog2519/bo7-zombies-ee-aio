@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260">
+  <rect width="720" height="260" rx="12" fill="#0b0b0f"/>
+  <text x="360" y="36" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Claw Machine  Common Combos</text>
+  <text x="360" y="60" text-anchor="middle" fill="#c9c9c9" font-family="Segoe UI, Arial" font-size="14">Charge green zone · match in-world tube labels</text>
+
+  <rect x="60" y="90" width="280" height="120" rx="10" fill="#15151c" stroke="#ff8a3d" stroke-width="2"/>
+  <text x="200" y="140" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="42" font-weight="700">7 + 2</text>
+  <text x="200" y="180" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="14">Circuit 7 · pair 2</text>
+
+  <rect x="380" y="90" width="280" height="120" rx="10" fill="#15151c" stroke="#ff8a3d" stroke-width="2"/>
+  <text x="520" y="140" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="42" font-weight="700">6 + 3</text>
+  <text x="520" y="180" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="14">Circuit 6 · pair 3</text>
+</svg>
