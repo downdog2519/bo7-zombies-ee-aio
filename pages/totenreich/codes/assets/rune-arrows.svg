@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300">
+  <rect width="720" height="300" rx="12" fill="#0b0b0f"/>
+  <text x="360" y="36" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Rune Bonfires  Arrow Order</text>
+  <text x="360" y="60" text-anchor="middle" fill="#c9c9c9" font-family="Segoe UI, Arial" font-size="14">Lines on each arrow = order · record the symbol it points to</text>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(70,95)">
+    <rect width="180" height="160" rx="10" fill="#15151c" stroke="#ff8a3d" stroke-width="2"/>
+    <text x="90" y="36" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="18" font-weight="700">ORDER 1</text>
+    <line x1="40" y1="80" x2="140" y2="80" stroke="#ff8a3d" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="140,80 118,68 118,92" fill="#ff8a3d"/>
+    <text x="90" y="120" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="13">1 line on arrow</text>
+    <text x="90" y="145" text-anchor="middle" fill="#aaa" font-family="Segoe UI, Arial" font-size="12">’ first bonfire</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(270,95)">
+    <rect width="180" height="160" rx="10" fill="#15151c" stroke="#ff8a3d" stroke-width="2"/>
+    <text x="90" y="36" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="18" font-weight="700">ORDER 2</text>
+    <line x1="40" y1="72" x2="140" y2="72" stroke="#ff8a3d" stroke-width="5" stroke-linecap="round"/>
+    <line x1="40" y1="88" x2="140" y2="88" stroke="#ff8a3d" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="140,80 118,66 118,94" fill="#ff8a3d"/>
+    <text x="90" y="120" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="13">2 lines on arrow</text>
+    <text x="90" y="145" text-anchor="middle" fill="#aaa" font-family="Segoe UI, Arial" font-size="12">’ second bonfire</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <g transform="translate(470,95)">
+    <rect width="180" height="160" rx="10" fill="#15151c" stroke="#ff8a3d" stroke-width="2"/>
+    <text x="90" y="36" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="18" font-weight="700">ORDER 3</text>
+    <line x1="40" y1="66" x2="140" y2="66" stroke="#ff8a3d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="40" y1="80" x2="140" y2="80" stroke="#ff8a3d" stroke-width="4" stroke-linecap="round"/>
+    <line x1="40" y1="94" x2="140" y2="94" stroke="#ff8a3d" stroke-width="4" stroke-linecap="round"/>
+    <polygon points="140,80 118,64 118,96" fill="#ff8a3d"/>
+    <text x="90" y="120" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="13">3 lines on arrow</text>
+    <text x="90" y="145" text-anchor="middle" fill="#aaa" font-family="Segoe UI, Arial" font-size="12">’ third bonfire</text>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="240" viewBox="0 0 720 240">
+  <rect width="720" height="240" rx="12" fill="#0b0b0f"/>
+  <text x="360" y="36" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Clock / Zodiac Math</text>
+  <text x="360" y="62" text-anchor="middle" fill="#c9c9c9" font-family="Segoe UI, Arial" font-size="14">Common solve for dial setting</text>
+
+  <rect x="50" y="95" width="160" height="90" rx="10" fill="#122018" stroke="#00ff88" stroke-width="2"/>
+  <text x="130" y="135" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Time of Death</text>
+  <text x="130" y="165" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="20">A</text>
+
+  <text x="240" y="155" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="36" font-weight="700"></text>
+
+  <rect x="280" y="95" width="160" height="90" rx="10" fill="#122018" stroke="#00ff88" stroke-width="2"/>
+  <text x="360" y="135" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Symptom Dur.</text>
+  <text x="360" y="165" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="20">B</text>
+
+  <text x="470" y="155" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="36" font-weight="700">=</text>
+
+  <rect x="510" y="95" width="160" height="90" rx="10" fill="#122018" stroke="#00ff88" stroke-width="2"/>
+  <text x="590" y="135" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Dial Result</text>
+  <text x="590" y="165" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="20">A  B</text>
+</svg>

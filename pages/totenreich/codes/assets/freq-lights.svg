@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280">
+  <rect width="720" height="280" rx="12" fill="#0b0b0f"/>
+  <text x="360" y="36" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="22" font-weight="700">Tyrs Head  Blink Count</text>
+  <text x="360" y="62" text-anchor="middle" fill="#c9c9c9" font-family="Segoe UI, Arial" font-size="14">Left light = Amplitude · Right light = Frequency · count flashes per sequence</text>
+
+  <!-- Left light -->
+  <rect x="70" y="90" width="240" height="150" rx="10" fill="#15151c" stroke="#ff8a3d" stroke-width="2"/>
+  <circle cx="190" cy="145" r="42" fill="#2a1208" stroke="#ff8a3d" stroke-width="3"/>
+  <circle cx="190" cy="145" r="22" fill="#ff8a3d" opacity="0.95"/>
+  <text x="190" y="210" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="18" font-weight="700">LEFT</text>
+  <text x="190" y="232" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="13">Amplitude ’ Seq #L</text>
+
+  <!-- Right light -->
+  <rect x="410" y="90" width="240" height="150" rx="10" fill="#15151c" stroke="#ff8a3d" stroke-width="2"/>
+  <circle cx="530" cy="145" r="42" fill="#2a1208" stroke="#ff8a3d" stroke-width="3"/>
+  <circle cx="530" cy="145" r="22" fill="#ffb06a" opacity="0.95"/>
+  <text x="530" y="210" text-anchor="middle" fill="#ff8a3d" font-family="Segoe UI, Arial" font-size="18" font-weight="700">RIGHT</text>
+  <text x="530" y="232" text-anchor="middle" fill="#ddd" font-family="Segoe UI, Arial" font-size="13">Frequency ’ Seq #R</text>
+</svg>

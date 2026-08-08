@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KOWAKUJŌ</title>
+  <link rel="stylesheet" href="../../styles/globals.css">
+  <link rel="stylesheet" href="../../styles/neon.css">
+  <link rel="stylesheet" href="../../styles/ee-shared.css">
+  <script src="../../scripts/header.js" defer></script>
+  <script type="module" src="../../scripts/router.js"></script>
+  <script type="module" src="kowakujo.js"></script>
+</head>
+<body class="metal-bg">
+  <div class="overlay-dark"></div>
+  <main class="center-container">
+    <div id="header"></div>
+    <section class="panel fullscreen-panel">
+      <h1 class="panel-header" style="color: #00ff88;">KOWAKUJŌ</h1>
+      <p class="map-meta" id="map-meta" style="color:#00ff88; text-align:center; opacity:0.85; margin-bottom:0.5rem;"></p>
+      <p style="text-align:center;color:#00ff88;opacity:0.7;margin-bottom:1.25rem;font-size:0.9rem;">
+        EE STEPS = walkthrough · CODE TRACKER = lanterns / murder board / clock codes
+      </p>
+      <div class="panel-buttons">
+        <button class="neon-btn neon-green" data-action="ee-steps">EE STEPS</button>
+        <button class="neon-btn neon-green" data-action="codes">CODE TRACKER</button>
+      </div>
+      <div class="back-row">
+        <button class="neon-btn neon-green" id="back-main">RETURN TO MAIN MENU</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

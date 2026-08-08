@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Totenreich – Code Tracker</title>
+  <link rel="stylesheet" href="../../../styles/globals.css">
+  <link rel="stylesheet" href="../../../styles/neon.css">
+  <link rel="stylesheet" href="../../../styles/ee-shared.css">
+  <link rel="stylesheet" href="../../../styles/code-sheet.css">
+  <script src="../../../scripts/header.js" defer></script>
+  <script type="module" src="codes.js"></script>
+</head>
+<body class="metal-bg">
+  <div class="overlay-dark"></div>
+  <main class="center-container">
+    <div id="header"></div>
+    <section class="panel fullscreen-panel code-panel accent-orange">
+      <h1 class="panel-header" style="color: var(--orange-glow);">TOTENREICH – CODE TRACKER</h1>
+      <p class="code-top-tip">Tap any image to zoom · values auto-save</p>
+
+      <div class="code-sheet-scroll" style="color: var(--orange-glow);">
+
+        <div class="code-section">
+          <div class="code-section-head">
+            <h2>1 · Frequency Numbers</h2>
+            <span class="code-badge">Tyr’s Head lights</span>
+          </div>
+          <div class="code-split">
+            <div class="code-img-col">
+              <img src="assets/freq-lights.jpg" class="code-ref-img zoomable" alt="Left Amplitude / Right Frequency lights" loading="eager">
+              <span class="img-caption">Left = Amplitude · Right = Frequency</span>
+            </div>
+            <div class="code-fields-col">
+              <p class="code-hint">Count blinks for both sequences, type them here, then enter on the tower dials.</p>
+              <div class="code-pair-grid">
+                <div class="code-pair">
+                  <span class="pair-label">Sequence 1</span>
+                  <label>Left <input class="code-input" id="freq1L" type="number" min="0" max="20" inputmode="numeric" placeholder="#"></label>
+                  <label>Right <input class="code-input" id="freq1R" type="number" min="0" max="20" inputmode="numeric" placeholder="#"></label>
+                </div>
+                <div class="code-pair">
+                  <span class="pair-label">Sequence 2</span>
+                  <label>Left <input class="code-input" id="freq2L" type="number" min="0" max="20" inputmode="numeric" placeholder="#"></label>
+                  <label>Right <input class="code-input" id="freq2R" type="number" min="0" max="20" inputmode="numeric" placeholder="#"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-section">
+          <div class="code-section-head">
+            <h2>2 · Claw Machine</h2>
+            <span class="code-badge">Uranium combo</span>
+          </div>
+          <div class="code-split">
+            <div class="code-img-col">
+              <img src="assets/claw-combo.jpg" class="code-ref-img zoomable" alt="Claw machine combo 7+2 or 6+3" loading="eager">
+              <span class="img-caption">Common targets: 7+2 or 6+3</span>
+            </div>
+            <div class="code-fields-col">
+              <div class="code-row stacked">
+                <label>Combo goal
+                  <select class="code-select wide" id="clawCombo">
+                    <option value="">— pick what you need —</option>
+                    <option value="7-2">Circuit 7 + pair 2</option>
+                    <option value="6-3">Circuit 6 + pair 3</option>
+                    <option value="other">Other / see notes</option>
+                  </select>
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Quick notes
+                  <input class="code-input wide" id="clawNote" type="text" placeholder="Node layout / attempt notes">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-section">
+          <div class="code-section-head">
+            <h2>3 · Rune / Bonfire Order</h2>
+            <span class="code-badge">Arrow lines = order</span>
+          </div>
+          <div class="code-split">
+            <div class="code-img-col">
+              <img src="assets/rune-arrows.jpg" class="code-ref-img zoomable" alt="Rune arrow order 1 2 3 lines" loading="eager">
+              <span class="img-caption">1 / 2 / 3 lines on the arrow</span>
+            </div>
+            <div class="code-fields-col">
+              <p class="code-hint">Write the symbol / bonfire each arrow points to.</p>
+              <div class="code-row stacked">
+                <label>Arrow 1 (1 line)
+                  <input class="code-input wide" id="rune1" type="text" placeholder="First symbol / location">
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Arrow 2 (2 lines)
+                  <input class="code-input wide" id="rune2" type="text" placeholder="Second symbol / location">
+                </label>
+              </div>
+              <div class="code-row stacked">
+                <label>Arrow 3 (3 lines)
+                  <input class="code-input wide" id="rune3" type="text" placeholder="Third symbol / location">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="back-row ee-buttons code-actions">
+        <button class="neon-btn neon-orange" id="reset-codes" type="button">RESET CODES</button>
+        <button class="neon-btn neon-orange" id="back-ee" type="button" style="display:none;">RETURN TO EE STEP</button>
+        <button class="neon-btn neon-orange" id="back-map" type="button">RETURN TO TOTENREICH</button>
+      </div>
+    </section>
+  </main>
+  <div id="img-zoom-overlay" class="zoom-overlay" aria-hidden="true"><img src="" alt="Zoomed reference"></div>
+</body>
+</html>

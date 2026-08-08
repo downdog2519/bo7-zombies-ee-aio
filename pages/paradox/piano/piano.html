@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paradox Junction – Piano Code</title>
+
+  <!-- Global styles (fixed paths) -->
+  <link rel="stylesheet" href="../../../styles/globals.css">
+  <link rel="stylesheet" href="../../../styles/neon.css">
+  <link rel="stylesheet" href="../../../styles/ee-shared.css">
+  
+  <link rel="stylesheet" href="piano.css">
+
+  <!-- Global systems -->
+  <script src="../../../scripts/header.js" defer></script>
+  <script type="module" src="../../../scripts/router.js"></script>
+  <script type="module" src="../../../scripts/storage.js"></script>
+
+  <!-- Page-specific JS -->
+  <script type="module">
+    import { Router } from "../../../scripts/router.js";
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      /* ---------------------------------------------
+         CONDITIONAL: SHOW RETURN TO EE ONLY IF
+         URL CONTAINS ?from=ee
+      --------------------------------------------- */
+      const params = new URLSearchParams(window.location.search);
+      const fromEE = params.get("from") === "ee";
+
+      const returnEE = document.getElementById("return-ee");
+      if (returnEE) {
+        returnEE.style.display = fromEE ? "block" : "none";
+      }
+
+      /* ---------------------------------------------
+         RETURN TO PARADOX JUNCTION (fixed)
+      --------------------------------------------- */
+      const backBtn = document.getElementById("back-paradox");
+      if (backBtn) {
+        backBtn.addEventListener("click", () => {
+          Router.go("../paradox.html");
+        });
+      }
+
+      /* ---------------------------------------------
+         RETURN TO EE STEP (fixed)
+      --------------------------------------------- */
+      if (returnEE) {
+        returnEE.addEventListener("click", () => {
+          Router.go("../easter-egg/easter-egg.html");
+        });
+      }
+
+    });
+  </script>
+</head>
+
+<body class="metal-bg">
+  <div class="overlay-dark"></div>
+
+  <main class="center-container">
+
+    <!-- ⭐ Injected Header (Logo + Version) -->
+    <div id="header"></div>
+
+    <section class="panel fullscreen-panel">
+      <h1 class="panel-header" style="color: var(--cyan-glow);">
+        PIANO CODE
+      </h1>
+
+      <div class="content-section metal-frame">
+        <div class="piano-wrapper">
+
+          <div class="piano-label">
+            PLAY THE NOTES IN THIS ORDER
+          </div>
+
+          <div class="piano-sequence">
+            <div class="piano-note">8</div>
+            <div class="piano-note">6</div>
+            <div class="piano-note">7</div>
+            <div class="piano-note highlight">5</div>
+            <div class="piano-note">6</div>
+            <div class="piano-note">5</div>
+            <div class="piano-note">3</div>
+            <div class="piano-note">5</div>
+          </div>
+
+          <div class="piano-hint">
+            Read from left to right.
+          </div>
+
+        </div>
+      </div>
+
+      <div class="back-row">
+        <button class="neon-btn neon-purple" id="return-ee">
+          RETURN TO EE STEP
+        </button>
+
+        <button class="neon-btn neon-cyan" id="back-paradox">
+          RETURN TO PARADOX JUNCTION
+        </button>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

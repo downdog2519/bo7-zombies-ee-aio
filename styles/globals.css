@@ -1,0 +1,286 @@
+/* ---------------------------------------------
+   FONT IMPORTS
+--------------------------------------------- */
+@font-face {
+  font-family: 'BO7Chalk';
+  src: url('../assets/fonts/bo7-chalk.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BO7SciFi';
+  src: url('../assets/fonts/bo7-sci-fi.ttf') format('truetype');
+}
+
+/* ---------------------------------------------
+   ROOT VARIABLES
+--------------------------------------------- */
+:root {
+  --red-glow: #ff2a2a;
+  --purple-glow: #a020f0;
+  --cyan-glow: #00eaff;
+  --orange-glow: #ff9a1f;
+  --cmz-gold: #d4af37;
+  --cmz-gold-dim: #b8860b;
+  --text-main: #f5f5f5;
+
+  --shadow-strong: 0 0 20px rgba(0,0,0,0.8);
+  --shadow-soft: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* ---------------------------------------------
+   GLOBAL RESET
+--------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------------------------------
+   GLOBAL LAYOUT (Unified)
+--------------------------------------------- */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: #000;
+  color: var(--text-main);
+  font-family: 'BO7SciFi', system-ui, sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* Main container for all pages */
+.center-container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 2rem;
+  gap: 3rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------------------------------------------
+   BACKGROUND SYSTEM
+--------------------------------------------- */
+body.metal-bg {
+  background: #000 url('../assets/images/backgrounds/metal-medium.png')
+              center/cover no-repeat fixed;
+  position: relative;
+  overflow-y: auto;
+}
+
+.overlay-dark {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.05), transparent 40%),
+    radial-gradient(circle at bottom, rgba(0,0,0,0.9), #000);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------------------------------------------
+   FULLSCREEN PANEL MODE
+--------------------------------------------- */
+.fullscreen-panel {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 2rem;
+
+  border-radius: 0;
+
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+
+  box-shadow: none;
+}
+
+/* ---------------------------------------------
+   METAL PANEL (Floating Panel Style)
+--------------------------------------------- */
+.panel {
+  background: rgba(0, 0, 0, 0.65);
+  background-image: url("../assets/images/backgrounds/metal-medium.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+
+  padding: 2rem;
+  backdrop-filter: blur(4px);
+
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.9),
+    inset 0 0 12px rgba(255, 255, 255, 0.03);
+}
+
+/* ---------------------------------------------
+   HEADER / LOGO
+--------------------------------------------- */
+#header {
+  width: 100%;
+  display: block;
+}
+
+.logo-header {
+  width: 100%;
+  display: block;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#header, .logo-header {
+  text-align: left !important;
+}
+
+/* ---------------------------------------------
+   MAP SELECT GRID
+--------------------------------------------- */
+.map-select {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ---------------------------------------------
+   PANEL BUTTON LAYOUT
+--------------------------------------------- */
+.panel-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ---------------------------------------------
+   BACK ROW
+--------------------------------------------- */
+.back-row {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------------------------------
+   CMZ BRAND (main menu)
+--------------------------------------------- */
+.brand-kicker {
+  text-align: center;
+  color: var(--cmz-gold);
+  font-family: "BO7Chalk", sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  opacity: 0.85;
+  margin-bottom: 0.35rem;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.35);
+}
+
+.brand-title,
+.panel-header.brand-title {
+  text-align: center;
+  color: var(--cmz-gold) !important;
+  font-family: "BO7Chalk", sans-serif;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  letter-spacing: 0.18em;
+  margin: 0.1rem 0 0.35rem;
+  text-shadow:
+    0 0 10px rgba(212, 175, 55, 0.55),
+    0 0 24px rgba(184, 134, 11, 0.35);
+}
+
+.brand-product {
+  text-align: center;
+  color: var(--cmz-gold);
+  font-family: "BO7Chalk", sans-serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 0 0.65rem;
+  opacity: 0.95;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+.brand-subtitle {
+  text-align: center;
+  color: var(--cmz-gold);
+  opacity: 0.72;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+}
+
+.panel-header {
+  text-align: center;
+  font-family: "BO7Chalk", sans-serif;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------------------------------------------
+   FADE ANIMATION
+--------------------------------------------- */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------
+   SELECTOR (GLOBAL)
+--------------------------------------------- */
+.selector-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.selector-box {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------
+   ZOOM OVERLAY (GLOBAL)
+--------------------------------------------- */
+#img-zoom-overlay,
+.zoom-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#img-zoom-overlay img,
+.zoom-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  border: 2px solid rgba(0,255,255,0.4);
+  box-shadow: 0 0 20px var(--cyan-glow);
+}

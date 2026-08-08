@@ -1,0 +1,5 @@
+# Optional: drop replacement screenshots here.
+# Filenames used by the app:
+#   lantern-map.jpg
+#   murder-board.jpg
+#   clock-math.jpg

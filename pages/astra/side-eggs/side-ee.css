@@ -1,0 +1,98 @@
+/* ---------------------------------------------
+   SIDE EE MAIN PANEL (UNIQUE)
+--------------------------------------------- */
+.side-ee-panel {
+  background: rgba(0, 0, 0, 0.65);
+  background-image: url("../../../assets/images/backgrounds/metal-medium.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.9),
+    inset 0 0 12px rgba(255, 255, 255, 0.03);
+
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------------------------------
+   STEPS GRID
+--------------------------------------------- */
+#steps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  #steps-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------------------------------------------
+   STEP MINI-PANEL
+--------------------------------------------- */
+.step-panel {
+  background: rgba(0, 0, 0, 0.55);
+  background-image: url("../../../assets/images/backgrounds/metal-small.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+
+  padding: 1rem;
+  box-shadow:
+    0 0 10px rgba(0,0,0,0.7),
+    inset 0 0 8px rgba(255,255,255,0.05);
+}
+
+/* ---------------------------------------------
+   STEP TITLE
+--------------------------------------------- */
+.step-title {
+  font-family: 'BO7Chalk';
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d28aff;
+  text-shadow:
+    0 0 6px black,
+    0 0 12px #d28aff,
+    0 0 18px #b46aff;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------------------------------------------
+   STEP IMAGE
+--------------------------------------------- */
+.step-img {
+  width: 65%;
+  max-width: 320px;
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 6px;
+  cursor: zoom-in;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.step-img.zoomable {
+  cursor: zoom-in;
+}
+
+/* ---------------------------------------------
+   STEP TEXT
+--------------------------------------------- */
+.step-text {
+  font-family: 'BO7SciFi';
+  color: var(--text-main);
+  line-height: 1.4;
+}
