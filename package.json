@@ -10,9 +10,6 @@
   "build": {
     "appId": "com.cmz.aio",
     "productName": "CMZ Zombies EE AIO",
-    "directories": {
-      "buildResources": "assets"
-    },
     "files": [
       "app/**/*",
       "main.js",
@@ -20,9 +17,33 @@
       "package.json"
     ],
     "win": {
-      "target": "nsis",
-      "icon": "app/assets/images/icon.ico"
-    }
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "app/assets/images/icon.ico",
+      "artifactName": "CMZ-Zombies-EE-AIO-${version}-${os}-setup.${ext}"
+    },
+    "portable": {
+      "artifactName": "CMZ-Zombies-EE-AIO-${version}-portable.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "CMZ Zombies EE AIO"
+    },
+    "compression": "maximum"
   },
   "devDependencies": {
     "electron": "^28.0.0",
