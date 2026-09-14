@@ -1,123 +1,166 @@
-/** Totenreich — Main EE steps + code tracker links */
+/** Totenreich — Season 3 Reloaded. */
 export const TOTENREICH = {
-  mapId: "totenreich",
-  title: "TOTENREICH – EASTER EGG GUIDE",
-  accentClass: "neon-orange",
-  accentVar: "var(--orange-glow)",
-  backPath: "../totenreich.html",
+  id: "totenreich",
+  name: "Totenreich",
+  short: "TOTENREICH",
+  season: "Season 3 Reloaded",
+  accent: "#ff9a1f",
   wonderWeapon: "Jotunn Star",
   boss: "Dravakar",
-  linkMap: {
-    "CODE TRACKER": "../codes/codes.html?from=ee",
-  },
+  assets: "assets/maps/totenreich/",
+  blurb: "Fishery Island, the War Factory and Eidskallen. Unlock PaP with the Glocke Drop, claim the Jotunn Star, gather three Uranium, build the Atomkraft Core and light the runes for Dravakar.",
+
   steps: [
     {
-      title: "STEP 1 — Power & Pack-a-Punch (Glocke Drop)",
-      text: `
-<b>Fishery Island → War Factory</b>
-<br>• Explore Fishery Island and repair broken power lines toward Tyr’s Head.
-<br>• Infiltrate the Gruppe 935 War Factory and retrieve the <b>Glocke Drop Controller</b>.
-<br>• Sync / activate Glocke Drop back on the island to unlock <b>Pack-a-Punch</b>.
-`,
+      title: "Power & Pack-a-Punch (Glocke Drop)",
+      tag: "Power",
+      where: "Fishery Island → War Factory",
+      need: [],
+      bullets: [
+        "Repair the broken power lines toward Tyr's Head.",
+        "Infiltrate the Gruppe 935 War Factory for the <b>Glocke Drop Controller</b>.",
+        "Sync / activate the Glocke Drop back on the island → Pack-a-Punch.",
+      ],
     },
     {
-      title: "STEP 2 — Jotunn Star Wonder Weapon",
-      text: `
-<b>Burial grounds + constellation</b>
-<br>• Collect the required wonder-weapon parts around Eidskallen.
-<br>• Complete the <b>Burial Grounds lockdown</b>.
-<br>• Solve the <b>constellation puzzle</b> and follow the ghostly guide up the <b>Lighthouse</b>.
-<br>• Pick up the <b>Jotunn Star</b> at the top.
-`,
+      title: "Jotunn Star (wonder weapon)",
+      tag: "Lighthouse",
+      where: "Eidskallen · Burial Grounds · Lighthouse",
+      need: ["Wonder-weapon parts"],
+      bullets: [
+        "Collect the parts around Eidskallen and complete the <b>Burial Grounds lockdown</b>.",
+        "Solve the constellation puzzle, follow the ghostly guide up the Lighthouse, pick up the <b>Jotunn Star</b>.",
+      ],
     },
     {
-      title: "STEP 3 — Crowbar → Flak → Transmitter",
-      text: `
-<b>Beacon Island cannon chain</b>
-<br>• Grab the <b>Crowbar</b> (Lighthouse 2F / listed spawn).
-<br>• Match paperwork / open cracked crate for the <b>Flak Gun Round</b>.
-<br>• Load the Flak Gun and fire at the <b>Tyr robot head</b>.
-<br>• Collect the <b>Transmitter</b> from the wreckage / spawn search.
-`,
+      title: "Crowbar → Flak round → Transmitter",
+      tag: "Beacon Island",
+      where: "Lighthouse 2F → Flak Gun → Tyr's head",
+      need: ["Crowbar"],
+      bullets: [
+        "Crowbar from the Lighthouse 2F. Match the paperwork / open the cracked crate for the <b>Flak Gun round</b>.",
+        "Load the Flak Gun and fire at the Tyr robot head. Collect the <b>Transmitter</b> from the wreckage.",
+      ],
     },
     {
-      title: "STEP 4 — Wunderbarrage Controller",
-      text: `
-<b>Antenna / blinking lights</b>
-<br>• Install Transmitter into Tyr’s head / array path.
-<br>• Count <b>two sequences</b> of left/right light flashes on the array tower.
-<br><img src="../codes/assets/freq-lights.jpg" class="ee-img zoomable" alt="Frequency lights">
-<br>• Record Left (Amplitude) / Right (Frequency) here: [CODE TRACKER]
-<br>• Enter sequence 1, then sequence 2 into the device.
-<br>• Ascend / side room → pick up <b>Wunderbarrage Controller</b> (Dry Dock stair access helps).
-`,
+      title: "Wunderbarrage Controller (frequency lights)",
+      tag: "Code",
+      where: "Tyr's head array tower",
+      need: ["Transmitter", "Frequency tool"],
+      bullets: [
+        "Install the Transmitter. Count <b>two sequences</b> of left/right light flashes on the tower: <b>Left = Amplitude, Right = Frequency</b>. Log them in the tool.",
+        "Enter sequence 1, then sequence 2 into the device. Ascend / side room → <b>Wunderbarrage Controller</b> (Dry Dock stairs help).",
+      ],
+      tools: ["freq"],
     },
     {
-      title: "STEP 5 — Uranium #1 (Fishing)",
-      text: `
-<b>Irradiated catch</b>
-<br>• Get the fishing rod.
-<br>• Fish where the <b>green glowing fish</b> is jumping.
-<br>• Next round, kill the special <b>Irradiated Ravager</b> that spawns → collect <b>Uranium</b>.
-`,
+      title: "Uranium #1 — fishing",
+      tag: "Uranium 1/3",
+      where: "Green glowing fish spot",
+      need: ["Fishing rod"],
+      bullets: ["Fish where the green glowing fish jumps. Next round kill the <b>Irradiated Ravager</b> that spawns → Uranium."],
     },
     {
-      title: "STEP 6 — Uranium #2 (ARC-XD Genetic Lab)",
-      text: `
-<b>Secret lab</b>
-<br>• Break the vent in Core Foundry / follow ARC-XD pathway into the secret Genetic Lab.
-<br>• Solve the jar / binary letter head puzzle (match lettered heads → purple water → carcass spike).
-<br>• Collect the second <b>Uranium</b>.
-`,
+      title: "Uranium #2 — ARC-XD genetic lab",
+      tag: "Uranium 2/3",
+      where: "Core Foundry vent → secret lab",
+      need: ["ARC-XD"],
+      bullets: ["Break the vent in Core Foundry, follow the ARC-XD path into the lab. Solve the jar / lettered heads puzzle (match heads → purple water → carcass spike) → Uranium."],
     },
     {
-      title: "STEP 7 — Uranium #3 (Glocke Drop)",
-      text: `
-<b>Airborne challenge</b>
-<br>• Use Glocke Drop / Wunderbarrage challenges (orange floating zombies waves).
-<br>• Complete the required eliminations mid-air / drop sequence.
-<br>• Collect the third <b>Uranium</b>.
-`,
+      title: "Uranium #3 — Glocke Drop challenge",
+      tag: "Uranium 3/3",
+      where: "Glocke Drop / Wunderbarrage",
+      need: ["Wunderbarrage Controller"],
+      bullets: ["Complete the airborne eliminations (orange floating zombie waves) → Uranium."],
     },
     {
-      title: "STEP 8 — Claw Machine → Atomkraft Core",
-      text: `
-<b>Claw minigame</b>
-<br><img src="../codes/assets/claw-combo.jpg" class="ee-img zoomable" alt="Claw combos">
-<br>• Insert Uraniums into the claw machine.
-<br>• Hit tube combos such as <b>7+2 or 6+3</b> (match in-world labels) — note yours: [CODE TRACKER]
-<br>• Receive the <b>Atomkraft Core</b>.
-`,
+      title: "Claw machine → Atomkraft Core",
+      tag: "Minigame",
+      where: "Claw machine",
+      need: ["3 Uranium"],
+      bullets: ["Insert the Uranium. Hit the tube combo shown in-world (commonly <b>7+2</b> or <b>6+3</b>) → <b>Atomkraft Core</b>."],
+      tools: ["claw"],
     },
     {
-      title: "STEP 9 — Defend / Charge Atomkraft Core",
-      text: `
-<b>Core delivery</b>
-<br>• Place Core on marked pallets / near Quick Revive → Storm Bridge path as guided.
-<br>• Keep generators / charge stations fed until the Core becomes <b>Charged</b>.
-<br>• Deliver Charged Core to break through for the <b>Dravakar Shard</b>.
-`,
+      title: "Charge & deliver the Core",
+      tag: "Dravakar Shard",
+      where: "Pallets near Quick Revive → Storm Bridge",
+      need: ["Atomkraft Core"],
+      bullets: ["Place the Core on the marked pallets, keep the generators / charge stations fed until it is <b>Charged</b>, deliver it to break through for the <b>Dravakar Shard</b>."],
     },
     {
-      title: "STEP 10 — Sunstone + Rune Bonfires",
-      text: `
-<b>Blodheim Hall → Stave Church</b>
-<br><img src="../codes/assets/rune-arrows.jpg" class="ee-img zoomable" alt="Rune arrow order">
-<br>• Place Dravakar Shard on the bone fire; light with <b>Jotunn Star</b> ranged attack.
-<br>• Use a <b>Disciple Injection</b> scorestreak and feed / throw zombies into the fire.
-<br>• Survive lockdown / kill HVT <b>Ozkarron</b> → take <b>Sunstone</b>.
-<br>• Place Sunstone in Eidskallen <b>Stave Church</b> → record rune / arrow order: [CODE TRACKER]
-<br>• Light map bonfires / blast rune pylons with Jotunn in the arrow order shown.
-`,
+      title: "Sunstone + rune bonfires",
+      tag: "Runes",
+      where: "Blodheim Hall → Stave Church → bonfires",
+      need: ["Dravakar Shard", "Jotunn Star", "Disciple Injection"],
+      bullets: [
+        "Place the Shard on the bone fire, light it with the Jotunn Star ranged attack. Use a Disciple Injection and feed / throw zombies into the fire.",
+        "Survive the lockdown, kill <b>Ozkarron</b> → <b>Sunstone</b>. Place it in the Eidskallen Stave Church and note the rune / arrow order.",
+        "Light the bonfires / blast the rune pylons with the Jotunn Star in that order.",
+      ],
+      tools: ["runes"],
     },
     {
-      title: "STEP 11 — Boss: Dravakar",
-      text: `
-<b>Dravakar fight</b>
-<br>• Start boss from Tyr’s Head / indicated trigger after runes.
-<br>• Destroy mouse-grenade skulls / shoot weak points as phases demand.
-<br>• Use Jotunn Star for area control; finish all phases to complete the Main Quest.
-`,
+      title: "Boss: Dravakar",
+      tag: "Final",
+      where: "Tyr's Head",
+      need: ["Jotunn Star", "Full ammo"],
+      bullets: ["Start from Tyr's Head after the runes. Destroy the skull grenades / weak points each phase; Jotunn Star for area control."],
     },
   ],
+
+  cheat: [
+    {
+      id: "freq",
+      title: "Frequency lights",
+      wide: true,
+      body: "Left = Amplitude · Right = Frequency. Count both sequences, enter them on the tower dials.",
+      tool: {
+        type: "fields",
+        fields: [
+          { id: "s1L", label: "Seq 1 · Left (Amp)", type: "number", big: true },
+          { id: "s1R", label: "Seq 1 · Right (Freq)", type: "number", big: true },
+          { id: "s2L", label: "Seq 2 · Left (Amp)", type: "number", big: true },
+          { id: "s2R", label: "Seq 2 · Right (Freq)", type: "number", big: true },
+        ],
+      },
+      imgs: [["freq-lights.jpg", "Left / Right lights"]],
+    },
+    {
+      id: "claw",
+      title: "Claw machine combo",
+      body: "Common targets: <b>7 + 2</b> or <b>6 + 3</b>. Match the in-world labels.",
+      tool: {
+        type: "fields",
+        fields: [
+          { id: "combo", label: "Combo", type: "select", options: ["", "Circuit 7 + pair 2", "Circuit 6 + pair 3", "Other"] },
+          { id: "note", label: "Notes", type: "text", placeholder: "Node layout / attempt notes" },
+        ],
+      },
+      imgs: [["claw-combo.jpg", "Claw combos"]],
+    },
+    {
+      id: "runes",
+      title: "Rune / bonfire order",
+      body: "Arrow lines = order (1, 2, 3 lines). Write what each arrow points at.",
+      tool: {
+        type: "fields",
+        fields: [
+          { id: "r1", label: "Arrow 1 (1 line)", type: "text" },
+          { id: "r2", label: "Arrow 2 (2 lines)", type: "text" },
+          { id: "r3", label: "Arrow 3 (3 lines)", type: "text" },
+        ],
+      },
+      imgs: [["rune-arrows.jpg", "Rune arrows"]],
+    },
+    {
+      id: "uranium",
+      title: "Uranium checklist",
+      body: "",
+      tool: { type: "checklist", items: ["Uranium 1 — fishing / Irradiated Ravager", "Uranium 2 — genetic lab", "Uranium 3 — Glocke Drop", "Atomkraft Core", "Core charged", "Dravakar Shard", "Sunstone"] },
+    },
+  ],
+
+  side: [],
 };

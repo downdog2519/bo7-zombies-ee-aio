@@ -1,7 +1,7 @@
 {
   "name": "cmz-bo7-zombies-ee-aio",
-  "version": "1.3.0",
-  "description": "CMZ BO7 Zombies EE AIO Tracker — Comfy Munchie Zombies companion for all maps through Season 4",
+  "version": "2.0.0",
+  "description": "CMZ BO7 Zombies EE AIO \u2014 Comfy Munchie Zombies second-screen companion: main quest steps, cheat sheets and side eggs for every map through Rex Infernus",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

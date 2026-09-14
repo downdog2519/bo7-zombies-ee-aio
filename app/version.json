@@ -1,11 +1,12 @@
 {
-  "version": "1.3.0",
-  "lastUpdated": "2026-08-08",
+  "version": "2.0.0",
+  "lastUpdated": "2026-09-14",
   "maps": [
     "ashes",
     "astra",
     "paradox",
     "totenreich",
-    "kowakujo"
+    "kowakujo",
+    "rex"
   ]
 }

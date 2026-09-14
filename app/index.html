@@ -4,36 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0a0a">
-  <meta name="description" content="CMZ BO7 Zombies EE AIO — track Main EE steps and code tools for every map.">
+  <meta name="description" content="CMZ BO7 Zombies EE AIO — main quest steps, cheat sheets and side eggs for every Black Ops 7 Zombies map, built for a second screen.">
   <title>CMZ · BO7 Zombies EE AIO</title>
   <link rel="icon" type="image/webp" href="assets/images/logo/cmz-logo.webp">
   <link rel="apple-touch-icon" href="assets/images/logo/cmz-logo.webp">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles/globals.css">
-  <link rel="stylesheet" href="styles/neon.css">
-  <script src="scripts/header.js" defer></script>
-  <script type="module" src="scripts/router.js"></script>
-  <script type="module" src="scripts/storage.js"></script>
-  <script type="module" src="main-menu.js"></script>
+  <link rel="stylesheet" href="styles/app.css">
+  <script type="module" src="scripts/app.js"></script>
 </head>
-<body class="metal-bg">
-  <div class="overlay-dark"></div>
-  <main class="center-container">
-    <div id="header"></div>
-    <section class="panel fullscreen-panel">
-      <p class="brand-kicker">Comfy Munchie Zombies</p>
-      <h1 class="panel-header brand-title">CMZ</h1>
-      <h2 class="brand-product">BO7 Zombies EE AIO</h2>
-      <p class="brand-subtitle">
-        Maps · EE tracking · Code tools
-      </p>
-      <div class="panel-buttons" id="map-buttons">
-        <!-- Filled by main-menu.js -->
+<body>
+  <div id="app">
+    <aside id="sidebar"></aside>
+    <div id="main">
+      <header id="topbar"></header>
+      <div id="view">
+        <noscript><p style="padding:2rem;color:#d4af37;">This app needs JavaScript enabled.</p></noscript>
       </div>
-      <div class="panel-buttons" style="margin-top:1rem;">
-        <button class="neon-btn neon-green" data-action="readme">READ ME</button>
-      </div>
-    </section>
-  </main>
+    </div>
+  </div>
+  <div id="zoom" aria-hidden="true">
+    <figure><img alt="Zoomed image"><figcaption></figcaption></figure>
+  </div>
 </body>
 </html>
