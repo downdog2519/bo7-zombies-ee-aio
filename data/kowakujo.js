@@ -1,138 +1,166 @@
-/** Kowakujō — Main EE steps + code tracker links */
+/** Kowakujō — Season 4 Reloaded. */
 export const KOWAKUJO = {
-  mapId: "kowakujo",
-  title: "KOWAKUJŌ – EASTER EGG GUIDE",
-  accentClass: "neon-green",
-  accentVar: "#00ff88",
-  backPath: "../kowakujo.html",
+  id: "kowakujo",
+  name: "Kowakujō",
+  short: "KOWAKUJŌ",
+  season: "Season 4 Reloaded",
+  accent: "#00ff88",
   wonderWeapon: "Nekomancer",
   boss: "Nyxara",
-  linkMap: {
-    "CODE TRACKER": "../codes/codes.html?from=ee",
-  },
+  assets: "assets/maps/kowakujo/",
+  blurb: "Recapture the castle wards, rescue the cat for the Nekomancer, light 11 lanterns, gather the murder-mystery evidence, accuse the culprit, then Onryo and Nyxara.",
+
   steps: [
     {
-      title: "STEP 1 — World Seed & Pack-a-Punch",
-      text: `
-<b>Recapture wards → Sanctum</b>
-<br>• Recapture <b>Kitchens Ward</b> and <b>Training Area Ward</b> (stand at banner, fill capture bar).
-<br>• Central Courtyard: remove <b>Gate Glyphs</b> (Oni symbols on castle doors).
-<br>• War Room: kill the <b>Oni</b> → pick up <b>Shogun’s Hanko</b>.
-<br>• Use Hanko on the golden dragon door → enter <b>Shogun’s Sanctum</b>.
-<br>• Kill purple-marked zombies near the <b>World Seed</b> until it beams → <b>Pack-a-Punch</b> appears.
-`,
+      title: "World Seed & Pack-a-Punch",
+      tag: "Power",
+      where: "Kitchens Ward · Training Ward · Courtyard · War Room · Sanctum",
+      need: [],
+      bullets: [
+        "Recapture the <b>Kitchens Ward</b> and <b>Training Area Ward</b> (stand at the banner, fill the bar).",
+        "Central Courtyard: remove the Gate Glyphs (Oni symbols on the castle doors). War Room: kill the Oni → <b>Shogun's Hanko</b> → golden dragon door → Shogun's Sanctum.",
+        "Kill purple-marked zombies near the World Seed until it beams → Pack-a-Punch.",
+      ],
     },
     {
-      title: "STEP 2 — Craft Maneki-Neko",
-      text: `
-<b>Lucky cat tactical</b>
-<br>• Collect the three Maneki-Neko craft parts across the map.
-<br>• Build <b>Maneki-Neko</b> at the Workshop.
-<br>• Buy <b>PhD Flopper</b> (Storage Rooms) — required for the cage dive.
-`,
+      title: "Craft the Maneki-Neko",
+      tag: "Tactical",
+      where: "Workshop · Storage Rooms",
+      need: ["3 craft parts", "PhD Flopper"],
+      bullets: ["Collect the three Maneki-Neko parts, build it at the Workshop. Buy <b>PhD Flopper</b> (Storage Rooms) for the cage dive."],
     },
     {
-      title: "STEP 3 — Obtain Nekomancer Wonder Weapon",
-      text: `
-<b>Cat rescue ritual</b>
-<br>• Tenshu Entrance SW: PhD dolphin-dive under the caged cat to drop the cage.
-<br>• Carry cage to lava (Training Area works) and throw it in.
-<br>• Kill zombies at paw-print locations until prints form a circle; when lava flows across, throw Maneki-Neko into the center.
-<br>• Kill the <b>Abomination</b> that eats the cat; use <b>Death Perception</b> to recover the cat.
-<br>• Carry cat to World Seed (Sanctum). Kill near seed until it pulses red → melee between shockwaves → pick up <b>Nekomancer</b>.
-<br>• PaP later → Tsunderera-Hime (optional power spike).
-`,
+      title: "Nekomancer (wonder weapon)",
+      tag: "Cat rescue",
+      where: "Tenshu Entrance SW → lava → paw prints → Sanctum",
+      need: ["Maneki-Neko", "PhD", "Death Perception"],
+      bullets: [
+        "Tenshu Entrance SW: PhD dive under the caged cat to drop the cage. Carry it to lava (Training Area) and throw it in.",
+        "Kill zombies at the paw-print spots until they form a circle; when lava flows across, throw the Maneki-Neko into the centre.",
+        "Kill the Abomination that eats the cat, use Death Perception to recover it. Carry the cat to the World Seed, kill near it until it pulses red, melee between shockwaves → <b>Nekomancer</b>. PaP later → Tsunderera-Hime.",
+      ],
     },
     {
-      title: "STEP 4 — Light 11 Lanterns",
-      text: `
-<b>Purple flame trail</b>
-<br><img src="../codes/assets/lantern-map.jpg" class="ee-img zoomable" alt="Lantern route">
-<br>• Equip Nekomancer and shoot <b>11 stone lanterns</b> in the timed path (≈10s between lanterns or restart next round).
-<br>• Tick them off here as you go: [CODE TRACKER]
-<br>• Route starts at Tenshu Entrance and weaves Outer Ward / Courtyard / Gardens / Training (use community lantern map if needed).
-`,
+      title: "Light 11 lanterns",
+      tag: "Timed route",
+      where: "Tenshu Entrance → Outer Ward → Courtyard → Gardens → Training",
+      need: ["Nekomancer"],
+      bullets: ["Shoot the 11 stone lanterns in the route order (≈10 s between lanterns or restart next round). Tick them off in the tracker."],
+      imgs: [["lantern-map.jpg", "Lantern route"]],
+      tools: ["lanterns"],
     },
     {
-      title: "STEP 5 — Fox Mask Simon Says",
-      text: `
-<b>Evidence: Fox Mask</b>
-<br>• Trigger the Fox Mask Simon Says / memory sequence.
-<br>• Repeat the shown pattern correctly — jot the pattern if needed: [CODE TRACKER]
-<br>• Secure the Fox Mask evidence.
-`,
+      title: "Fox Mask — Simon says",
+      tag: "Evidence",
+      where: "Fox Mask interaction",
+      need: [],
+      bullets: ["Trigger the Fox Mask memory sequence and repeat the shown pattern. Note the pattern in the tracker."],
+      tools: ["mystery"],
     },
     {
-      title: "STEP 6 — Monkshood Flower",
-      text: `
-<b>Evidence: Monkshood</b>
-<br>• Grow / harvest the <b>Monkshood Flower</b> evidence using the gardening interaction on the map.
-<br>• Protect it through the grow timer if enemies aggro the plant.
-`,
+      title: "Monkshood Flower",
+      tag: "Evidence",
+      where: "Gardening interaction",
+      need: [],
+      bullets: ["Grow / harvest the Monkshood using the gardening interaction; protect it through the timer."],
     },
     {
-      title: "STEP 7 — Coin Purse, Shears, Abacus, Noble’s Hat",
-      text: `
-<b>Role evidence set</b>
-<br>• Collect <b>Coin Purse</b>, <b>Gardening Shears</b>, <b>Mercantile Abacus</b>, and <b>Noble’s Hat</b> from their marked locations / NPC caches.
-<br>• Keep them — needed for the murder board.
-`,
+      title: "Coin Purse · Shears · Abacus · Noble's Hat",
+      tag: "Evidence",
+      where: "Marked locations / NPC caches",
+      need: [],
+      bullets: ["Collect all four from their marked spots — needed for the murder board."],
     },
     {
-      title: "STEP 8 — Scrolls Pestle + Puffer Fish",
-      text: `
-<b>Evidence: Pestle & Puffer</b>
-<br>• Solve the <b>scrolls puzzle</b> to receive the <b>Pestle</b>.
-<br>• Obtain the <b>Puffer Fish</b> evidence (fishing / vendor step tied to Pestle use).
-`,
+      title: "Scrolls → Pestle + Puffer Fish",
+      tag: "Evidence",
+      where: "Scrolls puzzle · fishing / vendor",
+      need: [],
+      bullets: ["Solve the scrolls puzzle for the Pestle. Get the Puffer Fish evidence (fishing / vendor step tied to the Pestle)."],
     },
     {
-      title: "STEP 9 — Defend Sake Cup",
-      text: `
-<b>Evidence: Sake Cup</b>
-<br>• Build / place the Sake Cup and <b>defend</b> it through the lockdown.
-<br>• Collect the additional evidence reward when the defense succeeds.
-`,
+      title: "Defend the Sake Cup",
+      tag: "Evidence",
+      where: "Sake Cup lockdown",
+      need: [],
+      bullets: ["Place the Sake Cup and defend it through the lockdown. Collect the reward evidence."],
     },
     {
-      title: "STEP 10 — Clock & Flag → Crest Medallion",
-      text: `
-<b>Evidence: Crest Medallion</b>
-<br><img src="../codes/assets/clock-math.jpg" class="ee-img zoomable" alt="Clock math">
-<br>• Solve the <b>clock & flag</b> puzzle — record numbers / notes: [CODE TRACKER]
-<br>• Claim the <b>Crest Medallion</b> evidence.
-`,
+      title: "Clock & flag → Crest Medallion",
+      tag: "Evidence · math",
+      where: "Clock / zodiac",
+      need: ["Clock tool"],
+      bullets: ["Time of death − symptom duration = dial. Log both numbers in the tracker and it does the math. Claim the Crest Medallion."],
+      imgs: [["clock-math.jpg", "A − B = dial"]],
+      tools: ["clock"],
     },
     {
-      title: "STEP 11 — Solve the Murder Mystery",
-      text: `
-<b>Accusation board</b>
-<br><img src="../codes/assets/murder-board.jpg" class="ee-img zoomable" alt="Murder board">
-<br>• Place all evidence on the murder mystery board / shrine.
-<br>• Record which evidence goes on each poster for this run: [CODE TRACKER]
-<br>• Select the correct culprit combination (Takeo’s father mystery).
-<br>• Wrong guesses usually soft-fail — recheck evidence before locking in.
-`,
+      title: "Solve the murder mystery",
+      tag: "Accusation",
+      where: "Murder board / shrine",
+      need: ["All evidence"],
+      bullets: ["Place all evidence on the board. Record which evidence goes on each poster in the tracker, then select the culprit combination. Wrong guesses soft-fail — recheck before locking in."],
+      imgs: [["murder-board.jpg", "Murder board"]],
+      tools: ["mystery"],
     },
     {
-      title: "STEP 12 — Fight the Onryo",
-      text: `
-<b>HVT Oni</b>
-<br>• Interact with the cleansed World Seed to start.
-<br>• Fight <b>Onryo</b> in Central Courtyard.
-<br>• When immune, shoot the thrown masks to strip immunity.
-<br>• After victory, restock — Nyxara portal opens from PaP roof path.
-`,
+      title: "Onryo (HVT)",
+      tag: "Mini boss",
+      where: "Central Courtyard",
+      need: [],
+      bullets: ["Interact with the cleansed World Seed. Fight Onryo; when immune, shoot the thrown masks. Restock after — the Nyxara portal opens from the PaP roof path."],
     },
     {
-      title: "STEP 13 — Boss: Nyxara",
-      text: `
-<b>Dragon fight (3 phases)</b>
-<br>• Capture the central circle for temporary invuln vs volcanic strips.
-<br>• Crit the eyes early; carry Oni-dropped flags back to the zone to refresh invuln.
-<br>• Later phases escalate fire lanes / adds — stay in safe strips and burst weak points.
-<br>• Defeat Nyxara to complete Kowakujō Main Quest.
-`,
+      title: "Boss: Nyxara",
+      tag: "Final · 3 phases",
+      where: "Dragon arena",
+      need: ["Full ammo + armour"],
+      bullets: ["Capture the central circle for temporary invulnerability vs the volcanic strips. Crit the eyes early; carry Oni-dropped flags back to refresh invuln. Stay in safe strips and burst weak points."],
     },
   ],
+
+  cheat: [
+    {
+      id: "lanterns",
+      title: "11 lanterns",
+      wide: true,
+      body: "Zone order: Tenshu Entrance (1–3) → Outer Ward (4–5) → Courtyard (6–7) → Gardens (8–9) → Training (10–11). ~10 s between shots.",
+      tool: { type: "checklist", items: ["Lantern 1", "Lantern 2", "Lantern 3", "Lantern 4", "Lantern 5", "Lantern 6", "Lantern 7", "Lantern 8", "Lantern 9", "Lantern 10", "Lantern 11"], grid: true },
+      imgs: [["lantern-map.jpg", "Route"]],
+    },
+    {
+      id: "mystery",
+      title: "Murder board · this run",
+      wide: true,
+      body: "Record each poster for this match.",
+      tool: {
+        type: "fields",
+        fields: [
+          { id: "p1", label: "Poster 1", type: "select", options: ["", "Comb", "Crest Medallion", "Coin Purse", "Gardening Shears", "Mercantile Abacus", "Noble's Hat", "Fox Mask", "Monkshood Flower", "Pestle", "Puffer Fish", "Sake Cup", "Ghostly Rifleman clue", "Court Doctor record", "Painting match item", "Other"] },
+          { id: "p2", label: "Poster 2 (culprit)", type: "select", options: ["", "Comb", "Crest Medallion", "Coin Purse", "Gardening Shears", "Mercantile Abacus", "Noble's Hat", "Fox Mask", "Monkshood Flower", "Pestle", "Puffer Fish", "Sake Cup", "Ghostly Rifleman clue", "Court Doctor record", "Painting match item", "Other"] },
+          { id: "p3", label: "Poster 3 (poison)", type: "select", options: ["", "Comb", "Crest Medallion", "Coin Purse", "Gardening Shears", "Mercantile Abacus", "Noble's Hat", "Fox Mask", "Monkshood Flower", "Pestle", "Puffer Fish", "Sake Cup", "Ghostly Rifleman clue", "Court Doctor record", "Painting match item", "Other"] },
+          { id: "p4", label: "Poster 4 (painting)", type: "select", options: ["", "Comb", "Crest Medallion", "Coin Purse", "Gardening Shears", "Mercantile Abacus", "Noble's Hat", "Fox Mask", "Monkshood Flower", "Pestle", "Puffer Fish", "Sake Cup", "Ghostly Rifleman clue", "Court Doctor record", "Painting match item", "Other"] },
+          { id: "p5", label: "Poster 5", type: "select", options: ["", "Comb", "Crest Medallion", "Coin Purse", "Gardening Shears", "Mercantile Abacus", "Noble's Hat", "Fox Mask", "Monkshood Flower", "Pestle", "Puffer Fish", "Sake Cup", "Ghostly Rifleman clue", "Court Doctor record", "Painting match item", "Other"] },
+          { id: "fox", label: "Fox Mask pattern", type: "text", placeholder: "Simon pattern" },
+          { id: "note", label: "Notes", type: "text", placeholder: "Ghost / doctor / flag notes" },
+        ],
+      },
+      imgs: [["murder-board.jpg", "Board layout"]],
+    },
+    {
+      id: "clock",
+      title: "Clock / zodiac math",
+      body: "Time of death (A) − symptom duration (B) = dial.",
+      tool: { type: "math", aLabel: "Time of death (A)", bLabel: "Symptom duration (B)", op: "−", resultLabel: "Dial" },
+      imgs: [["clock-math.jpg", "Clock math"]],
+    },
+    {
+      id: "evidence",
+      title: "Evidence checklist",
+      body: "",
+      tool: { type: "checklist", items: ["Fox Mask", "Monkshood Flower", "Coin Purse", "Gardening Shears", "Mercantile Abacus", "Noble's Hat", "Pestle", "Puffer Fish", "Sake Cup", "Crest Medallion"], grid: true },
+    },
+  ],
+
+  side: [],
 };
